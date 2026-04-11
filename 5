@@ -1,0 +1,39 @@
+// C++ code
+//
+void setup()
+{
+ pinMode(3, OUTPUT);
+ pinMode(6, OUTPUT);
+ pinMode(5, OUTPUT);
+}
+
+
+void loop()
+{
+  int v = analogRead(A0)/100;
+  
+  for(int r = 0; r < 255; r++)
+  {
+    analogWrite(3, 255 - r);
+    analogWrite(6, r);
+    delay(v);
+  }
+  
+    int n = analogRead(A0)/100;
+    
+  for(int b = 0; b < 255; b++)
+  {
+    analogWrite(6, 255 - b);
+    analogWrite(5, b);
+    delay(n);
+  }
+      
+    int m = analogRead(A0)/100;
+
+  for(int g = 0; g < 255; g++)
+  {
+    analogWrite(5, 255 - g);
+    analogWrite(3, g);
+    delay(m);
+  }
+}
