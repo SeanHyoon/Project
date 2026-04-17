@@ -1,0 +1,136 @@
+
+
+
+
+
+
+int addnumber = 13;
+int subnumber = 12;
+int number = 0; // Added semicolon
+
+int a = 4;
+int b = 5;
+int c = 8;
+int d = 7;
+int e = 6;
+int f = 3;
+int g = 2;
+
+void setup()
+{
+  pinMode(addnumber, INPUT);
+  pinMode(subnumber, INPUT);
+  
+  pinMode(a, OUTPUT);
+  pinMode(b, OUTPUT);
+  pinMode(c, OUTPUT);
+  pinMode(d, OUTPUT);
+  pinMode(e, OUTPUT);
+  pinMode(f, OUTPUT);
+  pinMode(g, OUTPUT);
+}
+
+void loop()
+{
+  // Check buttons
+  if(digitalRead(addnumber) == HIGH) {
+    number = number + 1;
+    delay(300); // Reduced delay for better responsiveness
+  }
+  
+  if(digitalRead(subnumber) == HIGH) {
+    number = number - 1;
+    delay(300); 
+  }
+
+  // Display Logic - Using == for comparison
+  if (number == 0) {
+    digitalWrite(a, HIGH);
+    digitalWrite(b, HIGH);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, HIGH);
+    digitalWrite(e, HIGH);
+    digitalWrite(f, HIGH);
+    digitalWrite(g, LOW);
+  }
+  else if (number == 1) {
+    digitalWrite(a, LOW);
+    digitalWrite(b, HIGH);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, LOW);
+    digitalWrite(e, LOW);
+    digitalWrite(f, LOW);
+    digitalWrite(g, LOW);
+  }
+  else if (number == 2) {
+    digitalWrite(a, HIGH);
+    digitalWrite(b, HIGH);
+    digitalWrite(c, LOW);
+    digitalWrite(d, HIGH);
+    digitalWrite(e, HIGH);
+    digitalWrite(f, LOW);
+    digitalWrite(g, HIGH);
+  }
+  else if (number == 3) {
+    digitalWrite(a, HIGH);
+    digitalWrite(b, HIGH);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, HIGH);
+    digitalWrite(e, LOW);
+    digitalWrite(f, LOW);
+    digitalWrite(g, HIGH);
+  }
+  else if (number == 4) {
+    digitalWrite(a, LOW);
+    digitalWrite(b, HIGH);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, LOW);
+    digitalWrite(e, LOW);
+    digitalWrite(f, HIGH);
+    digitalWrite(g, HIGH);
+  }
+  else if (number == 5) {
+    digitalWrite(a, HIGH);
+    digitalWrite(b, LOW);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, HIGH);
+    digitalWrite(e, LOW);
+    digitalWrite(f, HIGH);
+    digitalWrite(g, HIGH);
+  }
+  else if (number == 6) {
+    digitalWrite(a, HIGH);
+    digitalWrite(b, LOW);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, HIGH);
+    digitalWrite(e, LOW);
+    digitalWrite(f, HIGH);
+    digitalWrite(g, HIGH);
+  }
+  else if (number == 7) {
+    digitalWrite(a, HIGH);
+    digitalWrite(b, HIGH);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, LOW);
+    digitalWrite(e, LOW);
+    digitalWrite(f, LOW);
+    digitalWrite(g, LOW);
+  }
+  else if (number == 8) {
+    digitalWrite(a, HIGH);
+    digitalWrite(b, HIGH);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, HIGH);
+    digitalWrite(f, HIGH);
+    digitalWrite(g, LOW);
+  }
+  else if (number == 9) {
+    digitalWrite(a, HIGH);
+    digitalWrite(b, HIGH);
+    digitalWrite(c, HIGH);
+    digitalWrite(d, HIGH);
+    digitalWrite(e, LOW);
+    digitalWrite(f, HIGH);
+    digitalWrite(g, HIGH);
+  }
+}
